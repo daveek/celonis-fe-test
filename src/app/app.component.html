@@ -1,0 +1,16 @@
+<div>
+  <h1>
+    Welcome to the formulizer!
+  </h1>
+  <h3>Input formula</h3>
+  <p>
+    <textarea cols="100" rows="8" [(ngModel)]="formula"></textarea><br>
+  </p>
+  <p><button (click)="updateAstView()">Parse and update AST View</button></p>
+  <h3>Visualizer</h3>
+  <pre style="max-height: 300px; overflow-y: auto;background-color: #eeeeee;">{{syntaxTreeJson}}</pre>
+  <p><button (click)="convertAstToFormula()">Convert AST to Formula</button></p>
+  <h3>Visualizer-to-Formula</h3>
+  <p>{{ visualizerOutput }}</p>
+  <app-basic></app-basic>
+</div>
